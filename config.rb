@@ -55,6 +55,8 @@ set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
+  activate :autoprefixer
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
