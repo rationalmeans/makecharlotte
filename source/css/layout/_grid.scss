@@ -1,0 +1,96 @@
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.row {
+  margin: 0 0 $grid-pad (-$grid-pad);
+}
+
+.row-smallpad {
+  margin-left: (-$grid-pad-small);
+}
+
+.row-nomargin {
+  margin-bottom: 0;
+}
+
+.container,
+.row {
+  @extend .clearfix;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-left: $grid-pad;
+  width: 100%;
+
+  .row-smallpad & {
+    padding-left: $grid-pad-small;
+  }
+}
+
+// Optional outside padding
+.row-pad {
+  padding: 20px 0 20px 20px;
+
+  > [class*='col-']:last-of-type {
+    padding-right: 20px;
+  }
+}
+
+//
+// Responsive grid
+//
+
+// Small-width devices
+@for $i from 1 through $grid-columns {
+  .col-sm-#{$i} {
+    width: 100% / $grid-columns * $i;
+  }
+}
+
+@for $i from 1 to $grid-columns {
+  .offset-sm-#{$i} {
+    margin-left: 100% / $grid-columns * $i;
+  }
+}
+
+// Medium-width devices
+@include tablet-desktop {
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+
+  @for $i from 1 to $grid-columns {
+    .offset-md-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+// Large-width devices
+@include desktop {
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i},
+    .col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+
+  @for $i from 1 to $grid-columns {
+    .offset-lg-#{$i},
+    .offset-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+}

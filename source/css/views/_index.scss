@@ -1,0 +1,64 @@
+.index {
+  .centered {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    padding-right: 20px;
+  }
+
+  .ideas {
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    max-width: 100%;
+    width: 270px;
+    height: 60px;
+    padding-bottom: 2px;
+    margin-right: -6px;
+    text-align: left;
+
+    .period {
+      content: ".";
+      position: relative;
+      left: 275px;
+    }
+  }
+
+  .words {
+    display: inline;
+
+    span {
+      position: absolute;
+      opacity: 0;
+      overflow: hidden;
+      animation: rotateWord 18s linear infinite 0s;
+
+      &:nth-child(2) {
+        animation-delay: 3s;
+      }
+      &:nth-child(3) {
+        animation-delay: 6s;
+      }
+      &:nth-child(4) {
+        animation-delay: 9s;
+      }
+      &:nth-child(5) {
+        animation-delay: 12s;
+      }
+      &:nth-child(6) {
+        animation-delay: 15s;
+      }
+    }
+  }
+
+  @keyframes rotateWord {
+    0%  { opacity: 0; }
+    2%  { opacity: 0; transform: translateY(-30px); transform: translateY(-30px); }
+    5%  { opacity: 1; transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; transform: translateY(0px); transform: translateY(0px); }
+    20% { opacity: 0; transform: translateY(30px); transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+}
