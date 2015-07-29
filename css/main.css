@@ -742,23 +742,29 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 /* line 1, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 4, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 8, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
 html,
 body {
   height: 100%; }
 
-/* line 6, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
+/* line 13, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
 body {
   background: -webkit-linear-gradient(0deg, #735ACE 10%, #2EA3BD 90%);
-  background: linear-gradient(90deg, #735ACE 10%, #2EA3BD 90%); }
+  background: linear-gradient(90deg, #735ACE 10%, #2EA3BD 90%);
+  margin: 20px; }
 
-/* line 10, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+/* line 19, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1220,22 +1226,31 @@ h1 {
     .large {
       font-size: 24px; } }
 
-/* line 2, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+@media (min-height: 800px) {
+  /* line 2, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+  .index .hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); } }
+/* line 11, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
 .index .hero-title {
   font-size: 60px;
   margin-bottom: 60px;
   width: 280px; }
   @media (min-width: 560px) {
-    /* line 2, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 11, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .hero-title {
       font-size: 70px;
       width: 510px; } }
   @media (min-width: 960px) {
-    /* line 2, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 11, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .hero-title {
       font-size: 70px;
       width: 840px; } }
-/* line 18, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+/* line 27, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
 .index .ideas {
   display: inline-block;
   border-bottom: 1px solid #eee;
@@ -1244,38 +1259,38 @@ h1 {
   height: 1em;
   padding-bottom: 0.03em;
   text-align: left; }
-  /* line 27, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+  /* line 36, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
   .index .ideas .period {
     content: ".";
     position: relative;
     left: 4.4em; }
-/* line 34, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+/* line 43, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
 .index .words {
   display: inline; }
-  /* line 37, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+  /* line 46, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
   .index .words span {
     position: absolute;
     opacity: 0;
     overflow: hidden;
     -webkit-animation: rotateWord 18s linear infinite 0s;
             animation: rotateWord 18s linear infinite 0s; }
-    /* line 43, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 52, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .words span:nth-child(2) {
       -webkit-animation-delay: 3s;
               animation-delay: 3s; }
-    /* line 46, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 55, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .words span:nth-child(3) {
       -webkit-animation-delay: 6s;
               animation-delay: 6s; }
-    /* line 49, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 58, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .words span:nth-child(4) {
       -webkit-animation-delay: 9s;
               animation-delay: 9s; }
-    /* line 52, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 61, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .words span:nth-child(5) {
       -webkit-animation-delay: 12s;
               animation-delay: 12s; }
-    /* line 55, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+    /* line 64, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
     .index .words span:nth-child(6) {
       -webkit-animation-delay: 15s;
               animation-delay: 15s; }
@@ -1341,9 +1356,12 @@ h1 {
     opacity: 0; }
   100% {
     opacity: 0; } }
-/* line 71, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+/* line 80, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
 .index .info {
   margin-bottom: 60px; }
-/* line 76, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
-.index .form .btn {
-  font-size: inherit; }
+/* line 84, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+.index .form {
+  margin-bottom: 40px; }
+  /* line 86, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+  .index .form .btn {
+    font-size: inherit; }
