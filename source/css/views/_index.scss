@@ -1,4 +1,13 @@
 .index {
+  .hero-container {
+    @media (min-height: 800px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
   .hero-title {
     font-size: 60px;
     margin-bottom: 60px;
@@ -73,6 +82,7 @@
   }
 
   .form {
+    margin-bottom: 40px;
     .btn {
       font-size: inherit;
     }
