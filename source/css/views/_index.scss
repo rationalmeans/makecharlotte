@@ -1,27 +1,32 @@
 .index {
-  .centered {
-    width: 100%;
-    text-align: center;
-  }
-
   .hero-title {
-    padding-right: 20px;
+    font-size: 60px;
+    width: 280px;
+
+    @media (min-width: 560px) {
+      font-size: 70px;
+      width: 510px;
+    }
+
+    @media (min-width: 960px) {
+      font-size: 70px;
+      width: 840px;
+    }
   }
 
   .ideas {
     display: inline-block;
     border-bottom: 1px solid #eee;
     max-width: 100%;
-    width: 270px;
-    height: 60px;
-    padding-bottom: 2px;
-    margin-right: -6px;
+    width: 4.35em;
+    height: 1em;
+    padding-bottom: 0.03em;
     text-align: left;
 
     .period {
       content: ".";
       position: relative;
-      left: 275px;
+      left: 4.4em;
     }
   }
 
@@ -53,12 +58,12 @@
   }
 
   @keyframes rotateWord {
-    0%  { opacity: 0; }
-    2%  { opacity: 0; transform: translateY(-30px); transform: translateY(-30px); }
-    5%  { opacity: 1; transform: translateY(0px); transform: translateY(0px);}
-    17% { opacity: 1; transform: translateY(0px); transform: translateY(0px); }
-    20% { opacity: 0; transform: translateY(30px); transform: translateY(30px); }
-    80% { opacity: 0; }
+    0%   { opacity: 0; }
+    2%   { opacity: 0; transform: translateY(-30px); transform: translateY(-30px); }
+    5%   { opacity: 1; transform: translateY(0px);   transform: translateY(0px); }
+    17%  { opacity: 1; transform: translateY(0px);   transform: translateY(0px); }
+    20%  { opacity: 0; transform: translateY(30px);  transform: translateY(30px); }
+    80%  { opacity: 0; }
     100% { opacity: 0; }
   }
 }
