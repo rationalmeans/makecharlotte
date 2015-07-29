@@ -1,6 +1,7 @@
 .index {
   .hero-title {
     font-size: 60px;
+    margin-bottom: 60px;
     width: 280px;
 
     @media (min-width: 560px) {
@@ -65,5 +66,9 @@
     20%  { opacity: 0; transform: translateY(30px);  transform: translateY(30px); }
     80%  { opacity: 0; }
     100% { opacity: 0; }
+  }
+
+  .info {
+    margin-bottom: 60px;
   }
 }
