@@ -1,16 +1,5 @@
 .index {
   .hero-container {
-    @media (min-height: 800px) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .hero-title {
-    font-size: 60px;
-    margin-bottom: 60px;
     width: 280px;
 
     @media (min-width: 560px) {
@@ -22,6 +11,20 @@
       font-size: 70px;
       width: 840px;
     }
+
+    @media (max-width: 559px) and (min-height: 800px),
+           (max-width: 959px) and (min-height: 640px),
+           (min-width: 960px) and (min-height: 450px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .hero-title {
+    font-size: 60px;
+    margin-bottom: 60px;
   }
 
   .ideas {
