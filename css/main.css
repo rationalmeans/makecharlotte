@@ -1344,3 +1344,6 @@ h1 {
 /* line 71, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
 .index .info {
   margin-bottom: 60px; }
+/* line 76, /Users/tim/Dropbox/src/makecharlotte/source/css/views/_index.scss */
+.index .form .btn {
+  font-size: inherit; }
