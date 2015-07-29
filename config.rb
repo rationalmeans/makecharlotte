@@ -53,10 +53,10 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+activate :autoprefixer
+
 # Build-specific configuration
 configure :build do
-  activate :autoprefixer
-
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
