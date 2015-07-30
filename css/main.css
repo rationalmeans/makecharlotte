@@ -758,7 +758,7 @@ body {
 body {
   background: -webkit-linear-gradient(0deg, #735ACE 10%, #2EA3BD 90%);
   background: linear-gradient(90deg, #735ACE 10%, #2EA3BD 90%);
-  margin: 20px; }
+  padding: 20px; }
 
 /* line 19, /Users/tim/Dropbox/src/makecharlotte/source/css/layout/_overall.scss */
 .group:after {
