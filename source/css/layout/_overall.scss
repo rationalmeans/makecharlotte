@@ -13,6 +13,7 @@ body {
 body {
   background: linear-gradient(90deg, $bg-secondary-color 10%, $bg-primary-color 90%);
   padding: 20px;
+  transform-style: preserve-3d;
 }
 
 // Clearfix group
